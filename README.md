@@ -6,6 +6,10 @@ App manejadora de proyectos, que asigna tareas editables para realizar en cada u
 - Bootstrap
 - React Bootstrap
 - React Router DOM
+- Context API
+- useForm
+- useFetch
+- useFetchToken
 
 - Node JS
 - Express
