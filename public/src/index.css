@@ -1,0 +1,172 @@
+:root {
+    --black: #000;
+    --black2: #444;
+    --black3: #141414;
+    --blue1: #003153;
+    --blue2: #004a80;
+    --green: #004d1c;
+    --green2: #00752b;
+    --red: #990000;
+    --red2: #c20000;
+    --fontFamily: 'Raleway', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var( --fontFamily );
+    font-size: 20px;
+}
+
+.form-control, .form-control:focus {
+    color: var( --black );
+}
+
+.fa-user, .fa-envelope, .fa-key, .fa-plus-square, .fa-tasks {
+    color: var( --blue1 );
+}
+
+.invalid-icon {
+    color: var( --red );
+}
+
+.btn {   
+    background-color: var( --blue1 );
+    color: #fff
+}
+
+.btn:hover{
+    background-color: var( --blue2 );
+    color: #fff;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba( 0, 86, 179, 0.25 );
+}
+
+.login-register .form-group .normal-input, .new-project .form-group .normal-input, .task .form-group .normal-input {
+    background-color: transparent;
+    background-position: center bottom, center calc( 100% - 1px );
+    background-repeat: no-repeat;
+    background-size: 0 2px, 100% 1px; 
+    -webkit-transition: background 0s ease-out 0s;
+    -o-transition: background 0s ease-out 0s;
+    transition: background 0s ease-out 0s;
+}
+
+.login-register .form-group .normal-input, .login-register .form-group .normal-input:focus, .new-project .form-group .normal-input, .new-project .form-group .normal-input:focus, .task .form-group .normal-input, .task .form-group .normal-input:focus {
+    background-image: -webkit-gradient( linear, left top, left bottom, from( var( --blue2 ) ), to( var( --blue2 ) ) ), -webkit-gradient( linear, left top, left bottom, from( var( --black ) ), to( var( --black ) ) );
+    background-image: -webkit-linear-gradient( var( --blue2 ),  var( --blue2 ) ), -webkit-linear-gradient( var( --black ),  var( --black ) );
+    background-image: -o-linear-gradient( var( --blue2 ),  var( --blue2 ) ), -o-linear-gradient( var( --black ),  var( --black ) );
+    background-image: linear-gradient( var( --blue2 ), var( --blue2 ) ), linear-gradient( var( --black ),  var( --black ) );
+    border: 0 none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.login-register .form-group .normal-input:focus, .new-project .form-group .normal-input:focus, .task .form-group .normal-input:focus {
+    background-size: 100% 2px, 100% 1px;
+    outline: 0 none;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/* ERROR */
+.login-register .form-group .invalid-input, .new-project .form-group .invalid-input, .task .form-group .invalid-input {
+    background-color: transparent;
+    background-position: center bottom, center calc( 100% - 1px );
+    background-repeat: no-repeat;
+    background-size: 0 2px, 100% 1px; 
+    -webkit-transition: background 0s ease-out 0s;
+    -o-transition: background 0s ease-out 0s;
+    transition: background 0s ease-out 0s;
+}
+
+.login-register .form-group .invalid-input, .login-register .form-group .invalid-input:focus, .new-project .form-group .invalid-input, .new-project .form-group .invalid-input:focus, .task .form-group .invalid-input, .task .form-group .invalid-input:focus {
+    background-image: -webkit-gradient( linear, left top, left bottom, from( var( --red ) ), to( var( --red ) ) ), -webkit-gradient( linear, left top, left bottom, from( var( --red ) ), to( var( --red ) ) );
+    background-image: -webkit-linear-gradient( var( --red ),  var( --red ) ), -webkit-linear-gradient( var( --red ),  var( --red ) );
+    background-image: -o-linear-gradient( var( --red ),  var( --red ) ), -o-linear-gradient( var( --red ),  var( --red ) );
+    background-image: linear-gradient( var( --red ), var( --red ) ), linear-gradient( var( --red ),  var( --red ) );
+    border: 0 none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.login-register .form-group .invalid-input:focus, .new-project .form-group .invalid-input:focus, .task .form-group .invalid-input:focus {
+    background-size: 100% 2px, 100% 1px;
+    outline: 0 none;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/* ALERT ERROR */
+.alert-error {
+    color: var( --red );
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* LOADING */
+.container-spinner-main {
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.spinner-main {
+    height: 40px;
+    margin: 100px auto;
+    position: relative;
+    width: 40px;
+}
+  
+.double-bounce1, .double-bounce2 {
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;    
+}
+  
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+  
+@-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale( 0.0 ) }
+    50% { -webkit-transform: scale( 1.0 ) }
+}
+  
+@keyframes sk-bounce {
+    0%, 100% { 
+        transform: scale( 0.0 );
+        -webkit-transform: scale( 0.0 );
+    } 50% { 
+        transform: scale( 1.0 );
+        -webkit-transform: scale( 1.0 );
+    }
+}
